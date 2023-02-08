@@ -1,0 +1,424 @@
+@import "1 vars.sass"
+@import "2 media-mix.sass"
+/* structure */
+/* nd-tiled */
+.nd-tiled
+    height: 289px
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 35px 38px
+    padding-bottom: 33px
+    border-radius: 7px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    position: relative
+    +lg
+        height: 260px
+        padding: 30px 25px
+    +md
+        height: 235px
+        padding: 20px 22px
+.nd-tiled-row
+    display: flex
+    align-items: center
+.nd-tiled-arrow
+    margin-left: auto
+.nd-tiled-name
+    font-weight: 600
+    font-size: 24px
+    margin-right: 8px
+    color: #fff
+    line-height: 111%
+    max-width: 160px
+    display: flex
+    +md
+        font-size: 18px
+    +xs
+        font-size: 16px
+.nd-tiled-count
+    color: $accent
+    font-size: 13px
+    font-weight: 600
+    position: relative
+    top: -10px
+    right: -8px
+    +md
+        font-size: 11px
+.nd-tiled-arrow
+    color: #fff
+    font-size: 25px
+    position: relative
+    top: 4px
+    +md
+        position: absolute
+        right: 13px
+        top: 13px
+.icon-arrow-right-top
+    font-size: 16px
+/* nd-cats */
+.nd-cats
+    padding-top: 82px
+    padding-bottom: 105px
+    +md
+        padding-top: 70px
+        padding-bottom: 70px
+.nd-cats__title
+    margin-bottom: 34px
+    +lg
+        margin-bottom: 28px
+    +sm
+        margin-bottom: 13px
+.nd-cats__box
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 12px
+    justify-content: space-between
+    +sm
+        grid-template-columns: 1fr
+    .nd-tiled
+        +sm
+            height: 158px
+/* pops */
+.nd-pops
+    padding-bottom: 103px
+.nd-pops__title
+    margin-bottom: 30px
+    +lg
+        margin-bottom: 25px
+    +sm
+        margin-bottom: 13px
+.nd-pops__box
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 12px 0
+    +sm
+        gap: 11px 0
+    .nd-tiled
+        &:nth-child(1)
+            width: 28.5%
+        &:nth-child(2)
+            width: 28.5%
+        &:nth-child(3)
+            width: 40.8%
+        &:nth-child(4)
+            width: 40.8%
+        &:nth-child(5)
+            width: 28.5%
+        &:nth-child(6)
+            width: 28.5%
+        &:nth-child(7)
+            width: 28.5%
+        &:nth-child(8)
+            width: 28.5%
+        &:nth-child(9)
+            width: 40.8%
+        &:nth-child(10)
+            width: 40.8%
+        &:nth-child(11)
+            width: 58%
+    .nd-tiled
+        +lg
+            width: 32.5% !important
+        +sm
+            width: 49% !important
+            height: 213px
+        +xs
+            height: 155px
+            padding: 12px
+        &:nth-child(11)
+            +lg
+                width: 66.3% !important
+            +sm
+                width: 100% !important
+.nd-pops__block
+    background: url(../img/pops-block-img.png) no-repeat right center, #F0F4FB
+    padding: 32px 38px
+    align-items: flex-start
+    justify-content: flex-start
+.nd-pops__block-title
+    color: $primary
+    font-weight: 600
+    font-size: 32px
+    line-height: 105%
+    margin-bottom: 9px
+    max-width: 333px
+    letter-spacing: -1px
+    +md
+        font-size: 28px
+.nd-pops__block-text
+    font-size: 14px
+    line-height: 140%
+    color: #474D63
+    margin-bottom: 41px
+    max-width: 314px
+    +md
+        font-size: 13px
+        max-width: 247px
+        margin-bottom: 21px
+.nd-pops__block-btn
+    padding: 22px 35px
+    font-size: 15px
+    font-weight: 500
+    gap: 14px
+    +md
+        padding: 20px 34px
+    i
+        font-size: 12px
+/* nd-num */
+.nd-num
+    padding-bottom: 82px
+    +md
+        padding-bottom: 42px
+.nd-num__title
+    margin-bottom: 40px
+    +sm
+        margin-bottom: 25px
+    span
+        +xs
+            display: block
+.nd-num__wrapper
+    display: flex
+    gap: 62px
+    +lg
+        gap: 42px
+    +sm
+        flex-direction: column
+.nd-num__left
+    width: 460px
+    +md
+        width: 310px
+    +sm
+        width: 100%
+.nd-num__right
+    width: 604px
+    +md
+        width: 376px
+    +sm
+        width: 100%
+.nd-num__box
+    display: grid
+    grid-template-columns: 220px 168px
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 73px
+    +lg
+        grid-template-columns: 190px 168px
+        gap: 40px
+    +md
+        gap: 53px 0
+        grid-template-columns: 180px 133px
+    +sm
+        gap: 31px 0
+.nd-num__item
+    span
+        font-size: 63px
+        font-weight: 600
+        color: $primary
+        letter-spacing: -5.5px
+        +lg
+            font-size: 55px
+        +md
+            font-size: 40px
+            letter-spacing: -3.5px
+        +sm
+            font-size: 44px
+        +xs
+            font-size: 38px
+            display: inline-block
+            margin-bottom: 10px
+    p
+        font-size: 14px
+        color: $primary
+.nd-num__text
+    padding-top: 15px
+    margin-bottom: 39px
+    +lg
+        padding-top: 0
+    +sm
+        margin-bottom: 24px
+    p
+        margin-bottom: 20px
+        font-size: 14px
+        line-height: 140%
+        +md
+            font-size: 13px
+        span
+            font-weight: 600
+            color: $primary
+        &:last-child
+            margin-bottom: 0
+.nd-num__btn
+    padding: 20px 32px
+    font-size: 15px
+    gap: 10px
+    +sm
+        width: 100%
+        padding: 15px
+        justify-content: center
+    i
+        font-size: 10px
+/* nd-video */
+.nd-video
+    padding-bottom: 3px 
+/* nd-adv */
+.nd-adv
+    background: #2B4CA1
+    padding: 84px 0 92px
+    +lg
+        padding: 70px 0
+    +md
+        padding-top: 60px
+        padding-bottom: 70px
+    +sm
+        padding: 42px 0
+.nd-adv__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 20px
+    +md
+        padding: 0
+    +sm
+        flex-wrap: wrap
+        justify-content: center
+        gap: 21px 2px
+    +xs
+        flex-direction: column
+.nd-adv__item
+    max-width: 20%
+    text-align: center
+    +sm
+        max-width: auto
+        width: 100%
+        min-width: 145px
+    +xs
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        max-width: 100%
+.nd-adv__item-icon
+    margin-bottom: 16px
+    height: 41px
+    +xs
+        margin-bottom: 0
+        margin-right: 12px
+        width: 44px
+.nd-adv__item-name
+    color: #fff
+    font-size: 15px
+    line-height: 130%
+    +md
+        font-size: 12px
+        line-height: 111%
+    +xs
+        text-align: left
+    br
+        +xs
+            display: none
+/* nd-coop */
+.nd-coop
+    padding: 105px 0
+    padding-bottom: 115px
+    +md
+        padding: 70px 0
+    +sm
+        padding: 60px 0
+.nd-coop__title
+    margin-bottom: 25px
+    span
+        +xs
+            display: block
+.nd-coop__box
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    gap: 10px 2%
+    +sm
+        gap: 10px 0
+    img
+        max-width: 23%
+        +sm
+            max-width: 45%
+/* nd-coms */
+.nd-coms
+    padding-bottom: 105px
+.nd-coms__item
+    padding: 27px
+    border-radius: 7px
+    background: #F0F4FB
+    display: flex
+    justify-content: space-between
+    width: 33%
+    +md
+        padding: 17px 13px
+    +sm
+        width: 100%
+    +xs
+        height: 143px
+        padding: 20px 16px
+.nd-coms__item-count
+    color: $primary
+    font-size: 54px
+    display: inline-block
+    margin-bottom: 3px
+    +sm
+        margin-bottom: 23px
+.nd-coms__box
+    display: flex
+    justify-content: space-between
+    gap: 13px
+    +md
+        flex-direction: column
+.nd-coms__title
+    margin-bottom: 27px
+.nd-coms__item-left
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +sm
+        height: inherit
+    +xs
+        height: 100%
+.nd-coms__item-link
+    color: $accent
+    font-size: 15px
+    line-height: 24px
+    font-weight: 500
+    display: flex
+    align-items: center
+    gap: 9px
+    i
+        font-size: 10px
+        +md
+            font-size: 8px
+.nd-coms__item-right
+    height: 100%
+    text-align: right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.nd-coms__item-logo
+    img
+        +md
+            width: 80%
+/* nd-clients */
+.nd-clients__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 35px
+.nd-citem
+    border-radius: 7px
+    border: 3px solid #F0F4FB
+    padding: 29px 36px
+.nd-citem__top
+    display: flex
+    justify-content: space-between
+.nd-citem__wrapper
+    width: 574px
+    margin-right: 12px

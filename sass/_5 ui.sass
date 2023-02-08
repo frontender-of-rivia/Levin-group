@@ -1,0 +1,85 @@
+@import "1 vars.sass"
+@import "2 media-mix.sass"
+// fonts
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 500
+  src: url(../fonts/Inter/Inter-Medium.woff2)
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 800
+  src: url(../fonts/Inter/Inter-Extrabold.woff2)
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 700
+  src: url(../fonts/Inter/Inter-Bold.woff2)
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 600
+  src: url(../fonts/Inter/Inter-Semibold.woff2)
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 400
+  src: url(../fonts/Inter/Inter-Regular.woff2)
+@font-face
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 300
+  src: url(../fonts/Inter/Inter-Light.woff2)
+// helpers
+.overflow-hidden
+    overflow: hidden !important
+// config
+*
+    font-family: "Inter"
+// nd-title
+.nd-title
+  font-weight: 600
+  font-size: 38px
+  letter-spacing: -0.8px
+  color: #99A4B5
+  text-transform: uppercase
+  +lg
+    font-size: 32px
+  +sm
+    font-size: 28px
+  span
+    color: $primary
+// field
+.field
+    border: none
+    padding-bottom: 15px
+    border-bottom: 1px solid #000
+    width: 100%
+    &:focus
+        outline: none !important
+    &:active
+        outline: none !important
+// btn
+.btn
+    font-weight: 600
+    border-radius: 5px
+    cursor: pointer
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    i
+      position: relative
+      top: 2px
+.btn--default
+    background: $accent
+    color: #fff
+    &:hover
+      background: #FF833E
+.btn--border
+  background: transparent
+  border: 1px solid $accent
+  color: $accent
+  &:hover
+    border-color: #FF833E
+    color: #FF833E
