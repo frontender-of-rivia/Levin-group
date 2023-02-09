@@ -277,6 +277,8 @@ body
 .nd-header__center
     border-bottom: 1px solid #F1F1F1
     height: 67px
+    align-items: center
+    display: flex
     +sm
         height: 48px
         margin-bottom: 13px
@@ -561,6 +563,7 @@ body
     position: relative
 .nd-menu--open
     top: 150px !important
+    opacity: 1 !important
     +sm
         top: 115px !important
 .nd-menu
@@ -576,6 +579,7 @@ body
     transition: 0.2s ease
     top: -150vh
     z-index: 1000
+    opacity: 0
     +lg
         width: 950px
         grid-template-columns: 1fr 3fr

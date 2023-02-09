@@ -57,13 +57,118 @@
         top: 13px
 .icon-arrow-right-top
     font-size: 16px
+/* nd-main */
+.nd-main
+    padding-top: 70px
+    padding-bottom: 69px
+    background: url(../img/nd-main-bg.jpg) no-repeat center/cover
+    +sm
+        padding-top: 30px
+        padding-bottom: 50px
+    +xs
+        padding-bottom: 60px
+.nd-main__title
+    color: #fff
+    font-size: 48px
+    font-weight: 600
+    margin-bottom: 124px
+    line-height: 105%
+    +md
+        font-size: 38px
+        margin-bottom: 153px
+    +sm
+        font-size: 24px
+        margin-bottom: 70px
+    +xs
+        margin-bottom: 43px
+.nd-main__consult-text
+    color: #F0F4FB
+    line-height: 140%
+    font-size: 14px
+    width: 295px
+    +md
+        width: 250px
+    +sm
+        width: 170px
+        font-size: 13px
+    +xs
+        width: auto
+.nd-main__consult-img
+    +xs
+        min-width: 74px
+.nd-main__consult
+    display: flex
+    align-items: center
+    gap: 17px
+    +sm
+        flex-direction: column
+        align-items: flex-start
+    +xs
+        flex-direction: row
+        align-items: center
+        margin-bottom: 46px
+.nd-main__dots
+    position: relative
+    top: -47px
+    +sm
+        top: -37px
+    +xs
+        top: -43px
+.nd-main__wrapper
+    display: flex
+    justify-content: space-between
+    +xs
+        flex-direction: column
+.nd-main__right
+    width: 425px
+    padding-top: 30px
+    +lg
+        width: 375px
+    +md
+        width: 300px
+    +sm
+        width: 220px
+        padding-top: 0
+    +xs
+        display: none
+.nd-main__cell
+    margin-bottom: 34px
+.nd-main__btn
+    margin-bottom: 19px
+    .btn
+        width: 100%
+        padding: 16px
+        font-size: 15px
+.nd-main__accept
+    font-size: 11px
+    line-height: 140%
+    color: #D9D9D9
+    +sm
+        font-size: 8px
+    a
+        text-decoration: underline
+        color: #D9D9D9
+.nd-main__left
+    +sm
+        width: 190px
+    +xs
+        width: 100%
+.nd-main__leave
+    display: none
+    +xs
+        display: inline-flex
+        padding: 16px
+        width: 100%
+
 /* nd-cats */
 .nd-cats
-    padding-top: 82px
+    padding-top: 60px
     padding-bottom: 105px
     +md
         padding-top: 70px
         padding-bottom: 70px
+    +sm
+        padding-top: 45px
 .nd-cats__title
     margin-bottom: 34px
     +lg
@@ -83,6 +188,12 @@
 /* pops */
 .nd-pops
     padding-bottom: 103px
+    +md
+        padding-bottom: 70px
+    +sm
+        padding-bottom: 60px
+    +xs
+        padding-bottom: 55px
 .nd-pops__title
     margin-bottom: 30px
     +lg
@@ -134,10 +245,34 @@
             +sm
                 width: 100% !important
 .nd-pops__block
-    background: url(../img/pops-block-img.png) no-repeat right center, #F0F4FB
+    background: #F0F4FB
     padding: 32px 38px
     align-items: flex-start
     justify-content: flex-start
+    position: relative
+    overflow: hidden
+    +md
+        padding: 25px 27px
+    +sm
+        padding: 20px 27px
+    +xs
+        padding: 24px 28px 193px !important
+        height: auto !important
+        text-align: center
+.nd-pops__block-img
+    position: absolute
+    right: 0
+    bottom: -8px
+    +lg
+        width: 245px
+    +md
+        width: 215px
+        right: -10px
+    +sm
+        width: 190px
+        right: -30px
+    +xs
+        right: 52px
 .nd-pops__block-title
     color: $primary
     font-weight: 600
@@ -148,12 +283,16 @@
     letter-spacing: -1px
     +md
         font-size: 28px
+    +xs
+        font-size: 24px
 .nd-pops__block-text
     font-size: 14px
     line-height: 140%
     color: #474D63
     margin-bottom: 41px
     max-width: 314px
+    +lg
+        margin-bottom: 20px
     +md
         font-size: 13px
         max-width: 247px
@@ -165,6 +304,10 @@
     gap: 14px
     +md
         padding: 20px 34px
+    +sm
+        padding: 15px 34px
+    +xs
+        margin: 0 auto
     i
         font-size: 12px
 /* nd-num */
@@ -175,7 +318,7 @@
 .nd-num__title
     margin-bottom: 40px
     +sm
-        margin-bottom: 25px
+        margin-bottom: 15px
     span
         +xs
             display: block
@@ -372,7 +515,7 @@
     display: flex
     justify-content: space-between
     gap: 13px
-    +md
+    +sm
         flex-direction: column
 .nd-coms__title
     margin-bottom: 27px
@@ -408,17 +551,274 @@
         +md
             width: 80%
 /* nd-clients */
+.nd-clients
+    padding-bottom: 50px
+    +lg
+        padding-bottom: 60px
 .nd-clients__top
     display: flex
     justify-content: space-between
-    margin-bottom: 35px
+    margin-bottom: 28px
 .nd-citem
     border-radius: 7px
     border: 3px solid #F0F4FB
-    padding: 29px 36px
+    padding: 23px 32px
+    height: 231px
+    +sm
+        height: auto
 .nd-citem__top
     display: flex
     justify-content: space-between
+    margin-bottom: 23px
+    align-items: center
+    +md
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 12px
 .nd-citem__wrapper
     width: 574px
     margin-right: 12px
+    +lg
+        width: 470px
+    +md
+        width: 358px
+.nd-citem__human
+    display: flex
+    align-items: center
+    gap: 13px
+    +md
+        margin-bottom: 10px
+.nd-citem__name
+    color: $primary
+    font-size: 18px
+    font-weight: 700
+.nd-citem__date
+    color: #555
+    font-size: 12px
+.nd-citem__info
+    display: flex
+    align-items: center
+    gap: 9px
+.nd-citem__text
+    color: $primary
+    font-size: 14px
+    line-height: 148%
+    +sm
+        font-size: 13px
+.nd-clients__dots
+    position: relative
+    top: -48px
+.nd-clients__arrows
+    bottom: 140px
+.nd-clients__btn
+    padding: 16px 25px
+    gap: 5px
+/* nd-leave */
+.nd-leave
+    padding-bottom: 100px
+    +xs
+        padding-bottom: 55px
+.nd-leave__wrapper
+    padding: 60px 68px 70px
+    background: #F0F4FB
+    position: relative
+    overflow: hidden
+    +md
+        padding: 43px 38px
+    +sm
+        padding: 32px
+.nd-leave__title
+    margin-bottom: 52px
+    +md
+        margin-bottom: 44px
+    +sm
+        margin-bottom: 26px
+    +xs
+        font-size: 26px
+    span
+        display: block
+.nd-leave__form
+    background: transparent
+    width: 423px
+    +md
+        position: relative
+        z-index: 10
+    +sm
+        width: 100%
+.nd-leave__field
+    margin-bottom: 34px
+    +xs
+        margin-bottom: 31px
+.nd-leave__btn
+    font-size: 15px
+    width: 100%
+    padding: 16px
+.nd-leave__text
+    margin-top: 19px
+    color: #ABB3C3
+    font-size: 11px
+    line-height: 140%
+    +xs
+        font-size: 10px
+    a
+        color: #ABB3C3
+        text-decoration: underline
+.nd-leave__man
+    position: absolute
+    right: 76px
+    bottom: -15px
+    +lg
+        width: 400px
+        right: 6px
+    +md
+        width: 360px
+        right: -44px
+        bottom: -5px
+    +sm
+        display: none
+/* nd-ours */
+.nd-ours
+    padding-bottom: 104px
+.nd-ours__box
+    display: flex
+    flex-wrap: wrap
+    gap: 3px
+    justify-content: space-between
+    .nd-ours__item
+        background: url(../img/ours-img1.png) no-repeat center center/cover
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
+            width: 228px
+            height: 286px
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9)
+            width: 287.5px
+            height: 256px
+        &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(13), &:nth-child(14)
+            width: 228px
+            height: 286px
+        &:nth-child(15), &:nth-child(16), &:nth-child(17), &:nth-child(18)
+            width: 286px
+            height: 256px
+.nd-ours__top
+    margin-bottom: 28px
+/* nd-cusers */
+.nd-cusers
+    padding-bottom: 60px
+.nd-cusers__title
+    margin-bottom: 40px
+.nd-cusers__item-wrapper
+    margin-right: 13px
+.nd-cusers__arrows
+    bottom: 170px
+/* nd-ownprod */
+.nd-ownprod
+    padding-bottom: 105px
+.nd-ownprod__wrapper
+    border-radius: 7px
+    background: url(../img/ownprod-bg.jpg) no-repeat center center
+    text-align: center
+    padding: 84px 0
+.nd-ownprod__title
+    color: #F0F4FB
+    text-transform: uppercase
+    font-size: 33px
+    font-weight: 600
+    margin-bottom: 22px
+.nd-ownprod__text
+    color: #F0F4FB
+    font-size: 17px
+    line-height: 140%
+    max-width: 510px
+    margin: 0 auto
+/* nd-cert */
+.nd-cert
+    padding-bottom: 90px
+.nd-cert__title
+    margin-bottom: 20px
+.nd-cert__item-wrapper
+    width: 281px
+    margin-right: 12px
+.nd-cert__item
+    border: 2px solid #F0F4FB
+.nd-cert__arrows
+    bottom: 220px
+/* nd-plan */
+.nd-plan
+    background: #2B4CA1
+    padding-top: 75px
+.nd-plan__title
+    margin-bottom: 57px
+.nd-plan__box
+    display: flex
+    justify-content: space-between
+    margin-bottom: 75px
+.nd-plan__item
+    text-align: center
+    width: 150px
+.nd-plan__item-count
+    font-size: 38px
+    color: #fff
+    width: 75px
+    height: 75px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 22px
+    border-radius: 50px
+    border: 1px solid #879DBE
+.nd-plan__item-text
+    color: #fff
+    font-size: 15px
+    line-height: 130%
+    span
+        text-decoration: underline
+// nd-calc-box
+.nd-calc-box
+    display: flex
+    justify-content: space-between
+    gap: 12px
+.nd-calc-item
+    background: #fff
+    border-radius: 7px
+    padding: 21px 26px
+.nd-calc-item__icon
+    margin-bottom: 12px
+.nd-calc-item__text
+    color: $primary
+    font-size: 16px
+    line-height: 111%
+    margin-bottom: 17px
+.nd-calc-item__link
+    color: $accent
+    font-size: 14px
+    font-weight: 500
+/* nd-last */
+.nd-last
+    background: url(../img/last-bg.jpg) no-repeat center center/cover
+    padding-top: 168px
+    padding-bottom: 95px
+    margin-top: -50px
+    +lg
+        padding-top: 140px
+    .nd-last__title
+        color: #8E8E95
+        font-size: 38px
+        line-height: 48px
+        margin-bottom: 150px
+        +lg
+            margin-bottom: 100px
+            max-width: 400px
+        +md
+            font-size: 32px
+            line-height: 39px
+            margin-bottom: 90px
+        span
+            display: block
+            color: #fff
+    .nd-last__consult-text
+        width: 432px
+        +lg
+            width: 320px
+    .nd-last__wrapper
+        align-items: flex-start
+    .nd-last__right
+        padding-top: 55px

@@ -13,11 +13,11 @@
 	<!-- Icomoon -->
 	<link rel="stylesheet" href="libs/icomoon/icomoon.css">
 	<!-- slick slider -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="libs/slick slider/slick.css">
 	<!-- Fontawesome -->
-	<link rel="stylesheet" href="https://kit.fontawesome.com/9d2ac34ab6.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<!-- FancyBox -->
-	<link rel="stylesheet" href="libs/fancybox/fancybox.css">
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
 	<!-- Базовые стили CSS -->
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -27,7 +27,7 @@
 	<!-- header -->
 	<header class="nd-header">
 		<div class="nd-header__top">
-			<div class="container nd-header__top-container">
+			<div class="nd-container nd-header__top-container">
 				<div class="nd-htop">
 					<ul class="nd-htop__menu">
 						<!-- Пункт меню - "о нас" -->
@@ -208,7 +208,7 @@
 		</div>
 		<!-- nd-header__center -->
 		<div class="nd-header__center">
-			<div class="container nd-header__center-container">
+			<div class="nd-container nd-header__center-container">
 				<div class="nd-hcenter">
 					<a href="#" class="nd-hcenter__logo">
 						<picture>
@@ -240,7 +240,7 @@
 		</div>
 		<!-- nd-header__bottom -->
 		<div class="nd-header__bottom">
-			<div class="container nd-header__bottom-container">
+			<div class="nd-container nd-header__bottom-container">
 				<div class="nd-hbottom">
 					<div class="nd-hbottom__title">
 						<!-- <svg class="nd-cat-desk-ico" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -299,7 +299,7 @@
 		</div>
 	</header>
 	<!-- nd-menu -->
-	<div class="container container--menu">
+	<div class="nd-container container--menu">
 		<div class="nd-menu nd-tabs-wrapper">
 			<div class="nd-menu__close">
 				<i class="fa-solid fa-xmark"></i>
@@ -892,13 +892,13 @@
 		</div>
 		<form class="nd-popup__form">
 			<div class="nd-popup__field nd-field">
-				<input type="text" placeholder="Ваше имя" class="field">
+				<input type="text" placeholder="Ваше имя" class="nd-field">
 			</div>
 			<div class="nd-popup__field nd-field">
-				<input type="text" placeholder="+7 (999) 999-99-99" class="field">
+				<input type="text" placeholder="+7 (999) 999-99-99" class="nd-field">
 			</div>
 			<div class="nd-popup__field nd-field">
-				<input type="text" placeholder="Адрес и желаемая дата" class="field">
+				<input type="text" placeholder="Адрес и желаемая дата" class="nd-field">
 			</div>
 			<div class="nd-popup__btn">
 				<button type="submit" class="btn">Оставить заявку</button>
@@ -921,10 +921,10 @@
 		</div>
 		<form class="nd-popup__form">
 			<div class="nd-popup__field nd-field">
-				<input type="text" placeholder="Ваше имя" class="field">
+				<input type="text" placeholder="Ваше имя" class="nd-field">
 			</div>
 			<div class="nd-popup__field nd-field">
-				<input type="text" placeholder="+7 (999) 999-99-99" class="field">
+				<input type="text" placeholder="+7 (999) 999-99-99" class="nd-field">
 			</div>
 			<div class="nd-popup__btn">
 				<button type="submit" class="btn">Оставить заявку</button>
@@ -934,9 +934,72 @@
 			</div>
 		</form>
 	</div>
+	<!-- nd-main -->
+	<div class="nd-main-section">
+		<div class="nd-main-slider">
+			<div class="nd-main">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Бесплатная <br>консультация
+							</h1>
+							<div class="nd-main__consult">
+								<div class="nd-main__consult-img">
+									<img src="img/main-consult-img.png">
+								</div>
+								<div class="nd-main__consult-text">
+									Наш менеджер свяжется с вами и ответит на интересующие вопросы
+								</div>
+							</div>
+							<a href="#" class="nd-main__leave btn btn--default">
+								Оставить заявку
+							</a>
+						</div>
+						<div class="nd-main__right">
+							<form class="nd-main__form">
+								<div class="nd-main__cell">
+									<input type="text" class="nd-field nd-field--white" placeholder="Ваше имя">
+								</div>
+								<div class="nd-main__cell">
+									<input type="text" class="nd-field nd-field--white" placeholder="+7   (999) 999-99-99">
+								</div>
+								<div class="nd-main__btn">
+									<button class="btn btn--default">Оставить заявку</button>
+								</div>
+								<div class="nd-main__accept">
+									Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nd-main">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Бесплатная <br>консультация
+							</h1>
+							<div class="nd-main__consult">
+								<div class="nd-main__consult-img">
+									<img src="img/main-consult-img.png">
+								</div>
+								<div class="nd-main__consult-text">
+									Наш менеджер свяжется с вами и ответит на интересующие вопросы
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nd-main__dots nd-slider-dots"></div>
+	</div>
 	<!-- nd-cats -->
 	<div class="nd-cats">
-		<div class="container">
+		<div class="nd-container">
 			<h2 class="nd-cats__title nd-title">
 				<span>КАТЕГОРИИ</span> ТОВАРОВ
 			</h2>
@@ -979,7 +1042,7 @@
 	</div>
 	<!-- nd-pops -->
 	<div class="nd-pops">
-		<div class="container">
+		<div class="nd-container">
 			<h2 class="nd-pops__title nd-title">
 				<span>ПОПУЛЯРНЫЕ</span> ТОВАРЫ
 			</h2>
@@ -1095,6 +1158,9 @@
 					</div>
 				</div>
 				<div class="nd-tiled nd-pops__block">
+					<div class="nd-pops__block-img">
+						<img src="img/pops-block-img.png">
+					</div>
 					<div class="nd-pops__block-title">
 						Оставьте заявку для бесплатного замера
 					</div>
@@ -1109,12 +1175,9 @@
 			</div>
 		</div>
 	</div>
-
-
-
 	<!-- num -->
 	<div class="nd-num">
-		<div class="container">
+		<div class="nd-container">
 			<h2 class="nd-num__title nd-title">
 				<span>КОМПАНИЯ</span> В ЦИФРАХ
 			</h2>
@@ -1170,7 +1233,7 @@
 	</div>
 	<!-- nd-video -->
 	<div class="nd-video">
-		<div class="container">
+		<div class="nd-container">
 			<div class="nd-video__content">
 				<img src="img/video-img.jpg">
 			</div>
@@ -1178,7 +1241,7 @@
 	</div>
 	<!-- nd-adv -->
 	<div class="nd-adv">
-		<div class="container">
+		<div class="nd-container">
 			<div class="nd-adv__box">
 				<div class="nd-adv__item">
 					<div class="nd-adv__item-icon">
@@ -1225,7 +1288,7 @@
 	</div>
 	<!-- nd-coop -->
 	<div class="nd-coop">
-		<div class="container">
+		<div class="nd-container">
 			<h2 class="nd-coop__title nd-title">
 				<span>СОТРУДНИЧАЕМ</span> С КРУПНЫМИ <br> КОМПАНИЯМИ
 			</h2>
@@ -1243,7 +1306,7 @@
 	</div>
 	<!-- nd-coms -->
 	<div class="nd-coms">
-		<div class="container">
+		<div class="nd-container">
 			<h2 class="nd-coms__title nd-title">
 				<span>ОТЗЫВЫ</span> НЕЗАВИСИМЫЕ
 			</h2>
@@ -1310,13 +1373,14 @@
 	</div>
 	<!-- nd-clients -->
 	<div class="nd-clients">
-		<div class="container">
+		<div class="nd-container">
 			<div class="nd-clients__top">
 				<h2 class="nd-clients__title nd-title">
 					<span>ОТЗЫВЫ</span> КЛИЕНТОВ
 				</h2>
 				<a href="#" class="nd-clients__btn btn btn--default">
 					Все отзывы
+					<i class="fa fa-angle-right"></i>
 				</a>
 			</div>
 			<div class="nd-clients__wrapper">
@@ -1334,7 +1398,7 @@
 								</div>
 								<div class="nd-citem__info">
 									<div class="nd-citem__stars">
-	
+										<img src="img/stars-icon.svg">
 									</div>
 									<div class="nd-citem__date">
 										24.07.2017
@@ -1359,7 +1423,7 @@
 								</div>
 								<div class="nd-citem__info">
 									<div class="nd-citem__stars">
-	
+										<img src="img/stars-icon.svg">
 									</div>
 									<div class="nd-citem__date">
 										24.07.2017
@@ -1384,7 +1448,57 @@
 								</div>
 								<div class="nd-citem__info">
 									<div class="nd-citem__stars">
-	
+										<img src="img/stars-icon.svg">
+									</div>
+									<div class="nd-citem__date">
+										24.07.2017
+									</div>
+								</div>
+							</div>
+							<div class="nd-citem__text">
+								Заказ выполнен в срок, качественно. Мастер Вадим очень квалифировано подошёл к нашим пожеланиям и получилось всё аккуратно. Рекомендую.
+							</div>
+						</div>
+					</div>
+					<div class="nd-citem__wrapper">
+						<div class="nd-citem">
+							<div class="nd-citem__top">
+								<div class="nd-citem__human">
+									<div class="md-citem__img">
+										<img src="img/nd-citem1.png">
+									</div>
+									<div class="nd-citem__name">
+										Григорий
+									</div>
+								</div>
+								<div class="nd-citem__info">
+									<div class="nd-citem__stars">
+										<img src="img/stars-icon.svg">
+									</div>
+									<div class="nd-citem__date">
+										24.07.2017
+									</div>
+								</div>
+							</div>
+							<div class="nd-citem__text">
+								Заказ выполнен в срок, качественно. Мастер Вадим очень квалифировано подошёл к нашим пожеланиям и получилось всё аккуратно. Рекомендую.
+							</div>
+						</div>
+					</div>
+					<div class="nd-citem__wrapper">
+						<div class="nd-citem">
+							<div class="nd-citem__top">
+								<div class="nd-citem__human">
+									<div class="md-citem__img">
+										<img src="img/nd-citem1.png">
+									</div>
+									<div class="nd-citem__name">
+										Григорий
+									</div>
+								</div>
+								<div class="nd-citem__info">
+									<div class="nd-citem__stars">
+										<img src="img/stars-icon.svg">
 									</div>
 									<div class="nd-citem__date">
 										24.07.2017
@@ -1397,21 +1511,357 @@
 						</div>
 					</div>
 				</div>
-				<div class="nd-clients__arrows">
+				<div class="nd-clients__arrows nd-slider-arrows nd-slider-arrows--size1">
 
 				</div>
-				<div class="nd-clients__dots">
+				<div class="nd-clients__dots nd-slider-dots">
 
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- nd-leave -->
+	<div class="nd-leave">
+		<div class="nd-container">
+			<div class="nd-leave__wrapper">
+				<div class="nd-leave__content">
+					<h2 class="nd-leave__title nd-title">
+						<span>ОСТАВЬТЕ ЗАЯВКУ</span> НА ВЫЗОВ ЗАМЕРЩИКА
+					</h2>
+					<form action="#" class="nd-leave__form">
+						<div class="nd-leave__field">
+							<input type="text" class="nd-field" placeholder="Ваше имя">
+						</div>
+						<div class="nd-leave__field">
+							<input type="text" class="nd-field" placeholder="+7 (999) 999-99-99">
+						</div>
+						<div class="nd-leave__btn-area">
+							<button class="nd-leave__btn btn btn--default">
+								Оставить заявку
+							</button>
+						</div>
+						<div class="nd-leave__text">
+							Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
+						</div>
+					</form>
+				</div>
+				<div class="nd-leave__man">
+					<img src="img/leave-main-img.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- nd-ours -->
+	<div class="nd-ours">
+		<div class="nd-container">
+			<div class="nd-ours__top">
+				<h2 class="nd-ours__title nd-title">
+					<span>НАШИ</span> РАБОТЫ
+				</h2>
+				<div class="nd-ours__top-right">
+
+				</div>
+			</div>
+			<div class="nd-ours__wrapper">
+				<div class="nd-ours__box">
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
+					<div class="nd-ours__item">
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 
+	<!-- nd-cusers -->
+	<div class="nd-cusers">
+		<div class="nd-container">
+			<h2 class="nd-cusers__title nd-title">
+				<span>НАШИ</span> КЛИЕНТЫ
+			</h2>
+			<div class="nd-cusers__wrapper">
+				<div class="nd-cusers__box">
+					<div class="nd-cusers__item-wrapper">
+						<div class="nd-cusers__item">
+							<img src="img/casers-img1.png">
+						</div>
+					</div>
+					<div class="nd-cusers__item-wrapper">
+						<div class="nd-cusers__item">
+							<img src="img/casers-img2.png">
+						</div>
+					</div>
+					<div class="nd-cusers__item-wrapper">
+						<div class="nd-cusers__item">
+							<img src="img/casers-img3.png">
+						</div>
+					</div>
+					<div class="nd-cusers__item-wrapper">
+						<div class="nd-cusers__item">
+							<img src="img/casers-img3.png">
+						</div>
+					</div>
+				</div>
+				<div class="nd-cusers__arrows nd-slider-arrows nd-slider-arrows--size1"></div>
+			</div>
+		</div>	
+	</div>
+
+
+
+	<!-- nd-ownprod -->
+	<div class="nd-ownprod">
+		<div class="nd-container">
+			<div class="nd-ownprod__wrapper">
+				<div class="nd-ownprod__title">
+					СВОЕ ПРОИЗВОДСТВО
+				</div>
+				<div class="nd-ownprod__text">
+					Собственное производство позволяет делать минимальные реальные ценовые предложения
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- nd-cert -->
+	<div class="nd-cert">
+		<div class="nd-container">
+			<h2 class="nd-cert__title nd-title">
+				<span>СЕРТИФИКАТЫ</span> КОМПАНИИ
+			</h2>
+			<div class="nd-cert__wrapper">
+				<div class="nd-cert__box">
+					<div class="nd-cert__item-wrapper">
+						<div class="nd-cert__item">
+							<img src="img/cert-img1.png">
+						</div>
+					</div>
+					<div class="nd-cert__item-wrapper">
+						<div class="nd-cert__item">
+							<img src="img/cert-img1.png">
+						</div>
+					</div>
+					<div class="nd-cert__item-wrapper">
+						<div class="nd-cert__item">
+							<img src="img/cert-img1.png">
+						</div>
+					</div>
+					<div class="nd-cert__item-wrapper">
+						<div class="nd-cert__item">
+							<img src="img/cert-img1.png">
+						</div>
+					</div>
+					<div class="nd-cert__item-wrapper">
+						<div class="nd-cert__item">
+							<img src="img/cert-img1.png">
+						</div>
+					</div>
+				</div>
+				<div class="nd-cert__arrows nd-slider-arrows nd-slider-arrows--size1"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- nd-plan -->
+	<div class="nd-plan">
+		<div class="nd-container">
+			<h2 class="nd-plan__title nd-title">
+				<span>СХЕМА</span> РАБОТЫ
+			</h2>
+			<div class="nd-plan__box">
+				<div class="nd-plan__item">
+					<div class="nd-plan__item-count">
+						1
+					</div>
+					<div class="nd-plan__item-text">
+						Вы оставляете <span>заявку</span>
+					</div>
+				</div>
+				<div class="nd-plan__item">
+					<div class="nd-plan__item-count">
+						1
+					</div>
+					<div class="nd-plan__item-text">
+						Вы оставляете <span>заявку</span>
+					</div>
+				</div>
+				<div class="nd-plan__item">
+					<div class="nd-plan__item-count">
+						1
+					</div>
+					<div class="nd-plan__item-text">
+						Вы оставляете <span>заявку</span>
+					</div>
+				</div>
+				<div class="nd-plan__item">
+					<div class="nd-plan__item-count">
+						1
+					</div>
+					<div class="nd-plan__item-text">
+						Вы оставляете <span>заявку</span>
+					</div>
+				</div>
+				<div class="nd-plan__item">
+					<div class="nd-plan__item-count">
+						1
+					</div>
+					<div class="nd-plan__item-text">
+						Вы оставляете <span>заявку</span>
+					</div>
+				</div>
+			</div>
+			<div class="nd-calc-box">
+				<div class="nd-calc-item">
+					<div class="nd-calc-item__icon">
+						<img src="img/calc-icon1.svg">
+					</div>
+					<div class="nd-calc-item__text">
+						Расчёт стоимости роллет для окон и дверей 
+					</div>
+					<a href="#" class="nd-calc-item__link">
+						Рассчитать
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+				<div class="nd-calc-item">
+					<div class="nd-calc-item__icon">
+						<img src="img/calc-icon1.svg">
+					</div>
+					<div class="nd-calc-item__text">
+						Расчёт стоимости роллет для окон и дверей 
+					</div>
+					<a href="#" class="nd-calc-item__link">
+						Рассчитать
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+				<div class="nd-calc-item">
+					<div class="nd-calc-item__icon">
+						<img src="img/calc-icon1.svg">
+					</div>
+					<div class="nd-calc-item__text">
+						Расчёт стоимости роллет для окон и дверей 
+					</div>
+					<a href="#" class="nd-calc-item__link">
+						Рассчитать
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+				<div class="nd-calc-item">
+					<div class="nd-calc-item__icon">
+						<img src="img/calc-icon1.svg">
+					</div>
+					<div class="nd-calc-item__text">
+						Расчёт стоимости роллет для окон и дверей 
+					</div>
+					<a href="#" class="nd-calc-item__link">
+						Рассчитать
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- nd-last -->
+	<div class="nd-last">
+		<div class="nd-container">
+			<div class="nd-main__wrapper nd-last__wrapper">
+				<div class="nd-main__left">
+					<h1 class="nd-main__title nd-title nd-last__title">
+						<span>ОСТАВЬТЕ ЗАЯВКУ</span> ДЛЯ БЕСПЛАТНОГО ЗАМЕРА
+					</h1>
+					<div class="nd-main__consult">
+						<div class="nd-main__consult-img">
+							<img src="img/main-consult-img.png">
+						</div>
+						<div class="nd-main__consult-text nd-last__consult-text">
+							Наш менеджер свяжется с вами, для уточнения даты и времени замера, а так же ответит на интересующие вопросы
+						</div>
+					</div>
+					<a href="#" class="nd-main__leave btn btn--default">
+						Оставить заявку
+					</a>
+				</div>
+				<div class="nd-main__right nd-last__right">
+					<form class="nd-main__form">
+						<div class="nd-main__cell">
+							<input type="text" class="nd-field nd-field--white" placeholder="Ваше имя">
+						</div>
+						<div class="nd-main__cell">
+							<input type="text" class="nd-field nd-field--white" placeholder="+7   (999) 999-99-99">
+						</div>
+						<div class="nd-main__btn">
+							<button class="btn btn--default">Оставить заявку</button>
+						</div>
+						<div class="nd-main__accept">
+							Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- nd-footer -->
 	<footer class="nd-footer">
 		<div class="nd-footer__first">
-			<div class="container">
+			<div class="nd-container">
 				<div class="nd-footer__first-wrapper">
 					<a href="#" class="nd-footer__logo">
 						<img src="img/logo-footer.svg">
@@ -1442,7 +1892,7 @@
 			</div>
 		</div>
 		<div class="nd-footer__middle">
-			<div class="container">
+			<div class="nd-container">
 				<div class="nd-footer__middle-wrapper">
 					<div class="nd-footer__menu">
 						<div class="nd-footer__column">
@@ -1535,7 +1985,7 @@
 			</div>
 		</div>
 		<div class="nd-footer__last">
-			<div class="container">
+			<div class="nd-container">
 				<div class="nd-footer__last-wrapper">
 					<div class="nd-footer__root">
 						All rights reserved | Информация на данном сайте носит информационный характер и не является офертой. ст. 437 ч. 1 ГК РФ.
@@ -1558,11 +2008,9 @@
 	<!-- jquery -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<!-- slick slider -->
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<!-- fa -->
-	<script src="https://kit.fontawesome.com/9d2ac34ab6.js" crossorigin="anonymous"></script>
+	<script src="libs/slick slider/slick.min.js"></script>
 	<!-- FancyBox -->
-	<script src="libs/fancybox/fancybox.umd.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
 	<!-- Базовые скрипты javascript -->
 	<script src="js/main.js"></script>
 </body>

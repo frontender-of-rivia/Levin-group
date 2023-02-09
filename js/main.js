@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         });
     });
-    // slick slider
+    // nd-clients__box
     $('.nd-clients__box').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -84,5 +84,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
         dots: true,
         appendArrows: $('.nd-clients__arrows'),
         appendDots: $('.nd-clients__dots'),
+        prevArrow: '<i class="fa fa-angle-left"></i>',
+        nextArrow: '<i class="fa fa-angle-right"></i>',
+        responsive: [
+            {
+              breakpoint: 760,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+              }
+            },
+        ]
+    });
+    // nd-cusers__box
+    $('.nd-cusers__box').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        variableWidth: true,
+        appendArrows: $('.nd-cusers__arrows'),
+        prevArrow: '<i class="fa fa-angle-left"></i>',
+        nextArrow: '<i class="fa fa-angle-right"></i>',
+    });
+    // nd-cusers__box
+    $('.nd-cert__box').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        variableWidth: true,
+        appendArrows: $('.nd-cert__arrows'),
+        prevArrow: '<i class="fa fa-angle-left"></i>',
+        nextArrow: '<i class="fa fa-angle-right"></i>',
+    });
+    // nd-cusers__box
+    $('.nd-main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        appendDots: $('.nd-main__dots'),
+        arrows: false,
     });
 });
