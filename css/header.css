@@ -63,6 +63,12 @@ ul li:first-child {
   overflow: hidden !important;
 }
 
+.nd-body-wrapper-stop{
+  overflow: hidden !important;
+  height: calc(100vh - 148px);
+  position: relative;
+}
+
 .hidden {
   display: none;
 }
@@ -142,6 +148,7 @@ a {
   src: url(../fonts/Inter/Inter-Light.woff2);
 }
 
+/**/
 .overflow-hidden {
   overflow: hidden !important;
 }
@@ -155,6 +162,8 @@ html {
   font-family: "Inter";
 }
 
+
+/**/
 .nd-title {
   font-weight: 600;
   font-size: 38px;
@@ -816,6 +825,13 @@ body {
   gap: 4px;
   border-radius: 5px;
   cursor: pointer;
+  height: 100%;
+}
+
+.nd-hbottom__title1, .nd-hbottom__title2{
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nd-hbottom__title svg {
@@ -834,7 +850,6 @@ body {
 .nd-hbottom__title .icon-burger {
   color: #FE5C01;
   position: relative;
-  top: -1px;
   margin-right: 3px;
 }
 
@@ -854,15 +869,25 @@ body {
   justify-content: flex-end;
   gap: 46px;
   align-items: center;
+  height: 100%;
 }
 
 .nd-hbottom__point {
   font-size: 13px;
   color: #0C0A3E;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nd-hbottom__point:hover {
   color: #FE5C01;
+}
+
+.nd-hbottom__list{
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ND-MENU */
@@ -1393,6 +1418,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 30px 36px;
     height: 470px;
+    box-shadow: 0px 15px 10px -15px rgba(0,0,0,0.5);
+    padding-bottom: 30px;
   }
 }
 
@@ -1833,10 +1860,17 @@ body {
   .nd-hbottom__title--menu-open svg {
     display: none;
   }
+
+  .nd-header__bottom-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .nd-container {
     padding: 0 10px;
+  }
+  .nd-header__bottom-container {
+    padding: 0 15px;
   }
 }

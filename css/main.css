@@ -126,6 +126,7 @@
 .nd-main__dots {
   position: relative;
   top: -37px;
+  z-index: 100000;
 }
 
 .nd-main__wrapper {
@@ -824,8 +825,44 @@
   bottom: 170px;
 }
 
-/* nd-ownprod */
+.nd-slider-banner{
+  width: 100%;
+  height: 100%;
+  background: #FE5C01;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 7px;
+  transition: 0.2s ease;
+}
 
+.nd-slider-banner:hover{
+  background: #FF833E;
+}
+
+.nd-slider-banner .nd-slider-banner-icon img{
+  object-fit: unset !important;
+  border-radius: 0px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
+
+.nd-slider-banner-link{
+  font-size: 23px;
+  font-weight: 500;
+  color: #F1F1F1;
+  text-decoration: underline;
+  padding: 0 30px;
+}
+
+.nd-cusers__item .nd-slider-banner-icon {
+  margin: 0 auto;
+}
+
+/* nd-ownprod */
 .nd-ownprod {
   padding-bottom: 105px;
 }
@@ -865,15 +902,23 @@
 
 .nd-cert__item-wrapper {
   width: 281px;
+  height: 389px;
   margin-right: 12px;
+  max-height: 100%;
 }
 
 .nd-cert__item {
   border: 2px solid #F0F4FB;
+  display: block;
+  height: 100%;
 }
 
 .nd-cert__arrows {
   bottom: 240px;
+}
+
+.nd-cert__item .nd-slider-banner-icon {
+  margin: 0 auto;
 }
 
 /* nd-plan */
@@ -1289,6 +1334,7 @@ a.ft-action-btn:hover {
 
   .nd-cert__item-wrapper {
     width: 225px;
+    height: 305px;
   }
 
   .nd-cert__arrows {
@@ -1311,9 +1357,18 @@ a.ft-action-btn:hover {
   .nd-last .nd-last__consult-text {
     width: 320px;
   }
+
+  .nd-slider-banner-link{
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 991px) {
+  .nd-slider-banner-link{
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
   .nd-tiled {
     height: 235px;
     padding: 20px 22px;
@@ -1542,6 +1597,7 @@ a.ft-action-btn:hover {
 
   .nd-cert__item-wrapper {
     width: 172px;
+    height: 232px;
     margin-right: 8px;
   }
 
@@ -1590,6 +1646,14 @@ a.ft-action-btn:hover {
   .nd-last .nd-last__consult-text {
     width: 256px;
     font-size: 13px;
+  }
+
+  .nd-cusers__item .nd-slider-banner-icon {
+    width: 80px;
+  }
+
+  .nd-cert__item .nd-slider-banner-icon {
+    width: 60px;
   }
 }
 
@@ -2203,6 +2267,7 @@ a.ft-action-btn:hover {
 
   .nd-cert__item-wrapper {
     width: 130px;
+    height: 174px;
   }
 
   .nd-plan__title {
