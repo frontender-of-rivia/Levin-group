@@ -126,7 +126,7 @@
 .nd-main__dots {
   position: relative;
   top: -37px;
-  z-index: 100000;
+  z-index: 10000;
 }
 
 .nd-main__wrapper {
@@ -2333,7 +2333,7 @@ a.ft-action-btn:hover {
     margin-bottom: 51px;
     width: 320px;
     margin-left: -160px;
-    z-index: 100000000;
+    z-index: 10000;
   }
   .nd-clients__arrows .slick-arrow{
     position: relative;
