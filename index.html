@@ -302,7 +302,7 @@
 	<div class="nd-container container--menu">
 		<div class="nd-menu nd-tabs-wrapper">
 			<div class="nd-menu__close">
-				<i class="fa-solid fa-xmark"></i>
+				<img src="img/menu-close-icon.svg">
 			</div>
 			<div class="nd-menu__left">
 				<ul class="nd-menu__basic nd-tabs">
@@ -416,6 +416,12 @@
 								<li class="nd-menu__item-list">
 									<a href="#">Автоматические</a>
 								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Римские шторы2</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Автоматические2</a>
+								</li>
 							</ul>
 						</div>
 						<div class="nd-menu__item">
@@ -453,6 +459,12 @@
 								</li>
 								<li class="nd-menu__item-list">
 									<a href="#">Для детской</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Для детской</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Фотожалзи</a>
 								</li>
 								<li class="nd-menu__item-list">
 									<a href="#">Для детской</a>
@@ -506,6 +518,15 @@
 								</li>
 								<li class="nd-menu__item-list">
 									<a href="#">Для балкона</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Для детской</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Для детской</a>
+								</li>
+								<li class="nd-menu__item-list">
+									<a href="#">Фотожалзи</a>
 								</li>
 								<li class="nd-menu__item-list">
 									<a href="#">Для детской</a>
@@ -901,7 +922,7 @@
 				<input type="text" placeholder="Адрес и желаемая дата" class="nd-field">
 			</div>
 			<div class="nd-popup__btn">
-				<button type="submit" class="btn">Оставить заявку</button>
+				<button type="submit" class="nd-btn nd-btn--default">Оставить заявку</button>
 			</div>
 			<div class="nd-popup__last">
 				Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
@@ -934,10 +955,14 @@
 			</div>
 		</form>
 	</div>
+	<!-- popup video -->
+	<div class="nd-popup" id="nd-video-popup" style="display: none">
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/12WcMzjs0lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
 	<!-- nd-main -->
 	<div class="nd-main-section">
 		<div class="nd-main-slider">
-			<div class="nd-main">
+			<div class="nd-main" style="background-image: url(img/nd-main-bg.jpg);">
 				<div class="nd-container">
 					<div class="nd-main__wrapper">
 						<div class="nd-main__left">
@@ -952,7 +977,7 @@
 									Наш менеджер свяжется с вами и ответит на интересующие вопросы
 								</div>
 							</div>
-							<a href="#" class="nd-main__leave btn btn--default">
+							<a href="#" class="nd-main__leave nd-btn nd-btn--default">
 								Оставить заявку
 							</a>
 						</div>
@@ -965,7 +990,7 @@
 									<input type="text" class="nd-field nd-field--white" placeholder="+7   (999) 999-99-99">
 								</div>
 								<div class="nd-main__btn">
-									<button class="btn btn--default">Оставить заявку</button>
+									<button class="nd-btn nd-btn--default">Оставить заявку</button>
 								</div>
 								<div class="nd-main__accept">
 									Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
@@ -975,21 +1000,92 @@
 					</div>
 				</div>
 			</div>
-			<div class="nd-main">
+			<div class="nd-main nd-main--content" style="background-image: url(img/nd-main-bg2.jpg);">
 				<div class="nd-container">
 					<div class="nd-main__wrapper">
 						<div class="nd-main__left">
 							<h1 class="nd-main__title">
-								Бесплатная <br>консультация
+								Скидка 10% пенсионерам
 							</h1>
-							<div class="nd-main__consult">
-								<div class="nd-main__consult-img">
-									<img src="img/main-consult-img.png">
-								</div>
-								<div class="nd-main__consult-text">
-									Наш менеджер свяжется с вами и ответит на интересующие вопросы
-								</div>
+							<div class="nd-main__text">
+								Пенсионерам предоставляется скидка 10% на жалюзи и сантехнические рольставни
 							</div>
+							<a href="#" class="nd-main__btn nd-btn nd-btn--default">
+								Подробнее
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nd-main nd-main--content" style="background-image: url(img/nd-main-bg3.jpg);">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Скидка 10% именинникам
+							</h1>
+							<div class="nd-main__text">
+								При оформлении вызова эксперта в течение 3-х дней после дня рождения скидка на товар 10%	
+							</div>
+							<a href="#" class="nd-main__btn nd-btn nd-btn--default">
+								Подробнее
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nd-main nd-main--content" style="background-image: url(img/nd-main-bg4.jpg);">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Скидка 5% от самой низкой цены
+							</h1>
+							<div class="nd-main__text">
+								Вы нашли самую низкую цену? Мы с радостью подарим Вам ещё 5% от самой низкой цены, которую Вы нашли!	
+							</div>
+							<a href="#" class="nd-main__btn nd-btn nd-btn--default">
+								Подробнее
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nd-main nd-main--content" style="background-image: url(img/nd-main-bg5.jpg);">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Скидка 10% для новоселов
+							</h1>
+							<div class="nd-main__text">
+								Радуем новоселов своими скидками.	
+							</div>
+							<a href="#" class="nd-main__btn nd-btn nd-btn--default">
+								Подробнее
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nd-main nd-main--content" style="background-image: url(img/nd-main-bg6.jpg);">
+				<div class="nd-container">
+					<div class="nd-main__wrapper">
+						<div class="nd-main__left">
+							<h1 class="nd-main__title">
+								Уникальная система управления
+							</h1>
+							<div class="nd-main__text">
+								Управляйте всеми изделиями с одного телефона на базе iOS или Android	
+							</div>
+							<a href="#" class="nd-main__btn nd-btn nd-btn--default">
+								Подробнее
+								<i class="fa fa-angle-right"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -1004,39 +1100,39 @@
 				<span>КАТЕГОРИИ</span> ТОВАРОВ
 			</h2>
 			<div class="nd-cats__box">
-				<div class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img1.png)">
+				<a href="#" class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img1.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Рольставни
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img2.png)">
+				</a>
+				<a href="#" class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img2.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Жалюзи
 							<span class="nd-tiled-count">111</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img3.png)">
+				</a>
+				<a href="#" class="nd-tiled nd-tiled--33" style="background-image: url(img/cats-img3.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Ворота
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -1047,117 +1143,117 @@
 				<span>ПОПУЛЯРНЫЕ</span> ТОВАРЫ
 			</h2>
 			<div class="nd-pops__box">
-				<div class="nd-tiled" style="background-image: url(img/pops-bg1.png)">
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg1.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							<p>Горизонтальные жалюзи</p>
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg2.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg2.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Рольшторы День-Ночь
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg3.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg3.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Жалюзи BlackOut
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg4.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg4.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Деревянные жалюзи
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg5.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg5.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Рольставни на окна
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg6.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg6.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Рольставни в туалет
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg7.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg7.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Панорамные ворота
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg8.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg8.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Секционные ворота
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg9.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg9.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Откатные ворота
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled" style="background-image: url(img/pops-bg10.png)">
+				</a>
+				<a href="#" class="nd-tiled" style="background-image: url(img/pops-bg10.png)">
 					<div class="nd-tiled-row">
 						<div class="nd-tiled-name">
 							Рулонные ворота
 							<span class="nd-tiled-count">168</span>
 						</div>
 						<div class="nd-tiled-arrow">
-							<i class="icon-arrow-right-top"></i>
+							<img src="img/arrow-right-top-icon.svg" class="icon-arrow-right-top">
 						</div>
 					</div>
-				</div>
-				<div class="nd-tiled nd-pops__block">
+				</a>
+				<div href="#" class="nd-tiled nd-pops__block">
 					<div class="nd-pops__block-img">
 						<img src="img/pops-block-img.png">
 					</div>
@@ -1167,7 +1263,7 @@
 					<div class="nd-pops__block-text">
 						Наш сотрудник свяжется с вами, для уточнения даты и времени замера
 					</div>
-					<a href="#" class="nd-pops__block-btn btn btn--default">
+					<a href="#" class="nd-pops__block-btn nd-btn nd-btn--default">
 						Заказать
 						<i class="fa fa-angle-right"></i>
 					</a>
@@ -1223,7 +1319,7 @@
 						<p>Компания Levin Group осуществляет продажи жалюзи, рольставней и ворот. Мы занимаем ведущие позиции в Москве, Серпухове, Чехове и других городах. Вся реализуемая продукция имеет непревзойденное качество, а потому надежна и долговечна. Обратившись к нам, Вы получите безупречный сервис, подробные рекомендации по вопросам выбора и длительную гарантию на все изделия.</p>
 						<p><span>Предлагаем весь комплекс услуг:</span> замер, установку, гарантийный и послегарантийный ремонт.</p>
 					</div>
-					<a href="#" class="nd-num__btn btn btn--border">
+					<a href="#" class="nd-num__btn nd-btn nd-btn--border">
 						Подробнее о производстве
 						<i class="fa fa-angle-right"></i>
 					</a>
@@ -1234,9 +1330,18 @@
 	<!-- nd-video -->
 	<div class="nd-video">
 		<div class="nd-container">
-			<div class="nd-video__content">
-				<img src="img/video-img.jpg">
-			</div>
+			<a class="nd-video__content" data-fancybox data-src="#nd-video-popup">
+				<picture>
+					<source srcset="img/video-img2.jpg" media="(max-width: 760px)">
+					<img src="img/video-img.jpg">
+				</picture>
+				<div class="nd-video__play">
+					<img src="img/play-icon.svg">
+					<span class="nd-video__text">
+						ВИДЕО О НАС
+					</span>
+				</div>
+			</a>
 		</div>
 	</div>
 	<!-- nd-adv -->
@@ -1378,7 +1483,7 @@
 				<h2 class="nd-clients__title nd-title">
 					<span>ОТЗЫВЫ</span> КЛИЕНТОВ
 				</h2>
-				<a href="#" class="nd-clients__btn btn btn--default">
+				<a href="#" class="nd-clients__btn nd-btn nd-btn--default">
 					Все отзывы
 					<i class="fa fa-angle-right"></i>
 				</a>
@@ -1536,7 +1641,7 @@
 							<input type="text" class="nd-field" placeholder="+7 (999) 999-99-99">
 						</div>
 						<div class="nd-leave__btn-area">
-							<button class="nd-leave__btn btn btn--default">
+							<button class="nd-leave__btn nd-btn nd-btn--default">
 								Оставить заявку
 							</button>
 						</div>
@@ -1559,66 +1664,88 @@
 				<h2 class="nd-ours__title nd-title">
 					<span>НАШИ</span> РАБОТЫ
 				</h2>
-				<div class="nd-ours__top-right">
-
+				<div class="nd-ours__tright">
+					<div class="nd-ours__tright-title">
+						Все фото:
+					</div>
+					<ul class="nd-ours__tright-box">
+						<li class="nd-ours__tright-list">
+							<a href="#" class="nd-ours__tright-item nd-btn nd-btn--default">
+								Жалюзи
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</li>
+						<li class="nd-ours__tright-list">
+							<a href="#" class="nd-ours__tright-item nd-btn nd-btn--default">
+								Ворота
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</li>
+						<li class="nd-ours__tright-list">
+							<a href="#" class="nd-ours__tright-item nd-btn nd-btn--default">
+								Рольставни
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="nd-ours__wrapper">
 				<div class="nd-ours__box">
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
-					<div class="nd-ours__item">
-
-					</div>
+					<a href="img/our-img1.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img1.png">
+					</a>
+					<a href="img/our-img2.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img2.png">
+					</a>
+					<a href="img/our-img3.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img3.png">
+					</a>
+					<a href="img/our-img4.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img4.png">
+					</a>
+					<a href="img/our-img5.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img5.png">
+					</a>
+					<a href="img/our-img6.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img6.png">
+					</a>
+					<a href="img/our-img7.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img7.png">
+					</a>
+					<a href="img/our-img8.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img8.png">
+					</a>
+					<a href="img/our-img9.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img9.png">
+					</a>
+					<a href="img/our-img10.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img10.png">
+					</a>
+					<a href="img/our-img11.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img11.png">
+					</a>
+					<a href="img/our-img12.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img12.png">
+					</a>
+					<a href="img/our-img13.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img13.png">
+					</a>
+					<a href="img/our-img14.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img15.png">
+					</a>
+					<a href="img/our-img15.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img15.png">
+					</a>
+					<a href="img/our-img16.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img16.png">
+					</a>
+					<a href="img/our-img17.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img17.png">
+					</a>
+					<a href="img/our-img18.png" data-fancybox="nd-outs__item" class="nd-ours__item">
+						<img src="img/our-img18.png">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -1634,24 +1761,34 @@
 			<div class="nd-cusers__wrapper">
 				<div class="nd-cusers__box">
 					<div class="nd-cusers__item-wrapper">
-						<div class="nd-cusers__item">
+						<a href="img/casers-img1.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
 							<img src="img/casers-img1.png">
-						</div>
+						</a>
 					</div>
 					<div class="nd-cusers__item-wrapper">
-						<div class="nd-cusers__item">
+						<a href="img/casers-img2.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
 							<img src="img/casers-img2.png">
-						</div>
+						</a>
 					</div>
 					<div class="nd-cusers__item-wrapper">
-						<div class="nd-cusers__item">
+						<a href="img/casers-img3.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
 							<img src="img/casers-img3.png">
-						</div>
+						</a>
 					</div>
 					<div class="nd-cusers__item-wrapper">
-						<div class="nd-cusers__item">
+						<a href="img/casers-img1.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
+							<img src="img/casers-img1.png">
+						</a>
+					</div>
+					<div class="nd-cusers__item-wrapper">
+						<a href="img/casers-img2.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
+							<img src="img/casers-img2.png">
+						</a>
+					</div>
+					<div class="nd-cusers__item-wrapper">
+						<a href="img/casers-img3.png" data-fancybox="nd-cusers__item" class="nd-cusers__item">
 							<img src="img/casers-img3.png">
-						</div>
+						</a>
 					</div>
 				</div>
 				<div class="nd-cusers__arrows nd-slider-arrows nd-slider-arrows--size1"></div>
@@ -1669,7 +1806,7 @@
 					СВОЕ ПРОИЗВОДСТВО
 				</div>
 				<div class="nd-ownprod__text">
-					Собственное производство позволяет делать минимальные реальные ценовые предложения
+					Собственное производство позволяет делать <br>минимальные реальные ценовые предложения
 				</div>
 			</div>
 		</div>
@@ -1686,29 +1823,29 @@
 			<div class="nd-cert__wrapper">
 				<div class="nd-cert__box">
 					<div class="nd-cert__item-wrapper">
-						<div class="nd-cert__item">
+						<a class="nd-cert__item" href="img/cert-img1.png" data-fancybox="nd-cert__item">
 							<img src="img/cert-img1.png">
-						</div>
+						</a>
 					</div>
 					<div class="nd-cert__item-wrapper">
-						<div class="nd-cert__item">
-							<img src="img/cert-img1.png">
-						</div>
+						<a class="nd-cert__item" href="img/cert-img2.png" data-fancybox="nd-cert__item">
+							<img src="img/cert-img2.png">
+						</a>
 					</div>
 					<div class="nd-cert__item-wrapper">
-						<div class="nd-cert__item">
-							<img src="img/cert-img1.png">
-						</div>
+						<a class="nd-cert__item" href="img/cert-img3.png" data-fancybox="nd-cert__item">
+							<img src="img/cert-img3.png">
+						</a>
 					</div>
 					<div class="nd-cert__item-wrapper">
-						<div class="nd-cert__item">
-							<img src="img/cert-img1.png">
-						</div>
+						<a class="nd-cert__item" href="img/cert-img4.png" data-fancybox="nd-cert__item">
+							<img src="img/cert-img4.png">
+						</a>
 					</div>
 					<div class="nd-cert__item-wrapper">
-						<div class="nd-cert__item">
+						<a class="nd-cert__item" href="img/cert-img1.png" data-fancybox="nd-cert__item">
 							<img src="img/cert-img1.png">
-						</div>
+						</a>
 					</div>
 				</div>
 				<div class="nd-cert__arrows nd-slider-arrows nd-slider-arrows--size1"></div>
@@ -1734,34 +1871,34 @@
 				</div>
 				<div class="nd-plan__item">
 					<div class="nd-plan__item-count">
-						1
+						2
 					</div>
 					<div class="nd-plan__item-text">
-						Вы оставляете <span>заявку</span>
+						Выезд на <span>замер</span> от 4-х часов
 					</div>
 				</div>
 				<div class="nd-plan__item">
 					<div class="nd-plan__item-count">
-						1
+						3
 					</div>
 					<div class="nd-plan__item-text">
-						Вы оставляете <span>заявку</span>
+						Официальный <span>договор</span>, предоплата от 50%
 					</div>
 				</div>
 				<div class="nd-plan__item">
 					<div class="nd-plan__item-count">
-						1
+						4
 					</div>
 					<div class="nd-plan__item-text">
-						Вы оставляете <span>заявку</span>
+						<span>Монтаж</span> от 3-х рабочих дней
 					</div>
 				</div>
 				<div class="nd-plan__item">
 					<div class="nd-plan__item-count">
-						1
+						5
 					</div>
 					<div class="nd-plan__item-text">
-						Вы оставляете <span>заявку</span>
+						Официальная <span>гарантия 5 лет</span>
 					</div>
 				</div>
 			</div>
@@ -1783,7 +1920,7 @@
 						<img src="img/calc-icon1.svg">
 					</div>
 					<div class="nd-calc-item__text">
-						Расчёт стоимости роллет для окон и дверей 
+						Расчёт стоимости сантехнических рольставней 
 					</div>
 					<a href="#" class="nd-calc-item__link">
 						Рассчитать
@@ -1795,7 +1932,7 @@
 						<img src="img/calc-icon1.svg">
 					</div>
 					<div class="nd-calc-item__text">
-						Расчёт стоимости роллет для окон и дверей 
+						Расчёт стоимости жалюзи 
 					</div>
 					<a href="#" class="nd-calc-item__link">
 						Рассчитать
@@ -1807,7 +1944,7 @@
 						<img src="img/calc-icon1.svg">
 					</div>
 					<div class="nd-calc-item__text">
-						Расчёт стоимости роллет для окон и дверей 
+						Расчёт стоимости ворот 
 					</div>
 					<a href="#" class="nd-calc-item__link">
 						Рассчитать
@@ -1834,9 +1971,6 @@
 							Наш менеджер свяжется с вами, для уточнения даты и времени замера, а так же ответит на интересующие вопросы
 						</div>
 					</div>
-					<a href="#" class="nd-main__leave btn btn--default">
-						Оставить заявку
-					</a>
 				</div>
 				<div class="nd-main__right nd-last__right">
 					<form class="nd-main__form">
@@ -1847,7 +1981,7 @@
 							<input type="text" class="nd-field nd-field--white" placeholder="+7   (999) 999-99-99">
 						</div>
 						<div class="nd-main__btn">
-							<button class="btn btn--default">Оставить заявку</button>
+							<button class="nd-btn nd-btn--default">Оставить заявку</button>
 						</div>
 						<div class="nd-main__accept">
 							Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих персональных данных в соответствии с <a href="#">Пользовательским соглашением</a>.
@@ -1857,7 +1991,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- nd-footer -->
 	<footer class="nd-footer">
 		<div class="nd-footer__first">
@@ -1963,7 +2096,7 @@
 									+7 (495) 777-55-07
 								</a>
 							</div>
-							<a href="#" class="nd-footer_infos-call btn btn--border">
+							<a href="#" class="nd-footer_infos-call nd-btn nd-btn--border">
 								Заказать обратный звонок
 							</a>
 							<a href="mailto:office@levin-group.ru" class="nd-footer_infos-mail">
@@ -1998,17 +2131,12 @@
 			</div>
 		</div>
 	</footer>
-
-
-
-
-
-
-	
 	<!-- jquery -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<!-- slick slider -->
 	<script src="libs/slick slider/slick.min.js"></script>
+	<!-- fa -->
+	<script src="https://kit.fontawesome.com/9d2ac34ab6.js" crossorigin="anonymous"></script>
 	<!-- FancyBox -->
 	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
 	<!-- Базовые скрипты javascript -->

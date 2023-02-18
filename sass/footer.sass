@@ -1,5 +1,8 @@
 @import "1 vars.sass"
 @import "2 media-mix.sass"
+//
+.ua_js_yes.ua_svg_yes
+    overflow: hidden
 /* nd-footer */
 .nd-footer
     padding-top: 62px
@@ -205,6 +208,9 @@
     margin-bottom: 1px
     +xs
         margin-bottom: 17px
+    iframe
+        width: 167px
+        height: 50px
 .nd-footer_infos-youtube
     margin-bottom: 8px
     margin-right: -15px
@@ -261,6 +267,7 @@
 .nd-footer__last-wrapper
     display: flex
     justify-content: space-between
+    position: relative
     +md
         flex-direction: column
         gap: 6px

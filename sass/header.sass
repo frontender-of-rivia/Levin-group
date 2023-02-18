@@ -4,12 +4,20 @@
 @import "4 layout.sass"
 @import "5 ui.sass"
 @import "6 modules.sass"
+// стили 10.02.2023
+.nd-htop__menu > .menu-item-has-children > a:after
+    font: normal normal normal 14px/1 FontAwesome
+    content: "\f107"
+    font-size: 10px
+    color: #52617E
+    margin-bottom: 5px
+//
 body
-    padding-top: 168px
+    padding-top: 148px
     +md
         padding-top: 128px
     +sm
-        padding-top: 123px
+        padding-top: 116px
 .nd-hcenter__logo--fixed
     +sm
         display: none !important
@@ -78,7 +86,7 @@ body
     left: 0
     top: 0
     +sm
-        padding-bottom: 25px
+        padding-bottom: 15px
 /* nd-header__top */
 .nd-header__top
     height: 33px
@@ -97,7 +105,7 @@ body
 // nd-htop__menu
 .nd-htop__menu
     display: flex
-    gap: 21px
+    gap: 22.8px
     height: 100%
     +md
         display: none
@@ -121,9 +129,7 @@ body
     i
         font-size: 10px
         color: #52617E
-        margin-bottom: 3px
-        position: relative
-        top: 2px
+        margin-bottom: 5px
 .nd-htop__sublist
     display: block
 .nd-htop__subpoint
@@ -252,13 +258,13 @@ body
         .nd-hjob__box
             display: block
 /* nd-header__center */
-.nd-header__center-container.container
+.nd-header__center-container
     height: 100%
     +sm
-        width: 100%
-        padding: 0 30px
+        width: 100% !important
+        padding: 0 30px !important
     +xs
-        padding: 0 15px
+        padding: 0 15px !important
 .nd-hcenter
     height: 100%
     display: grid
@@ -309,7 +315,7 @@ body
         height: 33px
         position: absolute
         left: 0
-        top: -33px
+        top: -34px
         padding: 0
     +sm
         top: auto
@@ -326,6 +332,7 @@ body
 .nd-hcenter__searchinput
     font-size: 13px
     color: #ABB3C3
+    width: 100%
     padding-left: 47px
     background: url(../img/fonticon/magnifer.svg) no-repeat left center, transparent
     border: none
@@ -350,8 +357,13 @@ body
         margin-left: auto
     +xs
         padding-left: 0
+.nd-cat-desk-ico-open
+    background: url(../img/cross-icon.svg) no-repeat center center
+    path
+        display: none
 .nd-hcenter__phone
     margin-right: auto
+    height: 40.7px
     +sm
         min-width: 40px !important
         height: 40px
@@ -365,8 +377,9 @@ body
         margin-right: 0
     a
         color: $primary
-        font-size: 16.5px
+        font-size: 18px
         font-weight: 700
+        letter-spacing: -0.9px
         &:hover
             color: $accent
         +lg
@@ -377,6 +390,7 @@ body
         color: $accent
         font-size: 12px
         padding-left: 25px
+        line-height: 15px
         cursor: pointer
         &:hover
             color: #FF833E
@@ -386,13 +400,20 @@ body
             position: absolute
             left: 0
             top: 0
-            opacity: 0
+            opacity: 1
             width: 100%
             height: 100%
+            background: url(../img/phone-icon.svg) no-repeat center center
+            font-size: 0
     i
         color: $accent
         +sm
             color: #fff
+    svg
+        position: relative
+        width: 14px
+        top: 4px
+        left: 0px
 .nd-hcenter__btn
     color: $primary
     font-size: 14px
@@ -404,6 +425,7 @@ body
     gap: 8px
     align-items: center
     justify-content: center
+    height: 46px
     +md
         padding: 15px 12px
         font-size: 13px
@@ -479,10 +501,13 @@ body
     font-weight: 600
     color: $accent
     display: inline-flex
-    align-items: flex-end
+    align-items: center
     gap: 4px
     border-radius: 5px
     cursor: pointer
+    svg
+        position: relative
+        top: -1px
     &:hover
         color: #FF833E
         i
@@ -597,6 +622,10 @@ body
         margin-left: -48%
     +xs
         grid-template-columns: 127px 193px
+        overflow: hidden
+@media screen and (max-height: 690px) and (max-width: 500px)
+    .nd-mbanner
+        background-image: none !important
 .nd-menu__left
     background: #F0F4FB
     padding: 15px
@@ -621,7 +650,7 @@ body
     font-size: 16px
     margin-bottom: 10px
 .nd-menu__top-all
-    padding-bottom: 5px
+    padding-bottom: 2px
 .nd-menu__top
     margin-bottom: 32px
     display: flex
@@ -676,6 +705,8 @@ body
     +sm
         padding: 30px 20px
         padding-bottom: 0
+    +xs
+        gap: 5px
 .nd-menu__basic-list a
     color: #0C0A3E
     font-weight: 500
@@ -696,6 +727,8 @@ body
 .nd-manother__point
     color: #474D63
     font-size: 16px
+    +xs
+        font-size: 14px
     &:hover
         color: $accent
 .nd-menu__item-submenu
@@ -737,8 +770,19 @@ body
         gap: 30px
         height: 55vh
         padding-bottom: 50px
-.nd-tab-active a
+
+.nd-menu__basic-list a
+    border: none !important
+    &:hover
+        color: $accent
+.nd-menu__basic-list.nd-tab-active a
     color: $accent
+    text-decoration: none
+    &:hover
+        text-decoration: none
+    &:focus
+        border: none
+
 .nd-tab-item
     max-height: 100%
 .nd-menu__close
@@ -777,53 +821,65 @@ body
     +sm
         border-bottom-right-radius: 0
 /* nd-popup */
-.nd-popup
-    width: 515px
-    height: auto
-    border-radius: 7px
-    background: #fff
-    padding: 44px 63px 26px 63px
-    text-align: center
-    border: 1px solid gray
-    position: relative
-    +sm
-        width: 340px
-        padding: 24px 20px
-.nd-popup__title
-    font-size: 38px
-    font-weight: 600
-    margin-bottom: 17px
-    +sm
-        font-size: 28px
-.nd-popup__text
-    font-size: 14px
-    line-height: 135%
-    color: #474D63
-    margin-bottom: 34px
-    +sm
-        font-size: 13px
-.nd-popup__img
-    margin-bottom: 11px
-    +sm
-        width: 59px
-        margin-left: auto
-        margin-right: auto
-.nd-popup__field
-    margin-bottom: 34px
-    &:focus
-        border: none
-    +sm
-        margin-bottom: 28px
-.nd-popup__btn
-    margin-bottom: 17px
-.nd-popup__last
-    font-size: 12px
-    line-height: 140%
-    color: #949494
-    +sm
-        font-size: 11px
-    a
+.fancybox-container
+    div.nd-popup
+        width: 515px
+        height: auto
+        border-radius: 7px
+        background: #fff
+        padding: 44px 63px 26px 63px
+        text-align: center
+        border: 1px solid gray
+        position: relative
+        +sm
+            width: 340px
+            padding: 24px 20px
+        +xs
+            width: 90%
+    .nd-popup__title
+        font-size: 38px
+        font-weight: 600
+        margin-bottom: 17px
+        text-align: center
+        +sm
+            font-size: 28px
+    .nd-popup__text
+        font-size: 14px
+        line-height: 135%
+        color: #474D63
+        margin-bottom: 34px
+        text-align: center
+        +sm
+            font-size: 13px
+    .nd-popup__img
+        margin-bottom: 11px
+        text-align: center
+        +sm
+            width: 59px
+            margin-left: auto
+            margin-right: auto
+    .nd-popup__field
+        margin-bottom: 34px
+        &:focus
+            border: none
+        +sm
+            margin-bottom: 28px
+    .nd-popup__btn
+        margin-bottom: 17px
+    .nd-popup__last
+        font-size: 12px
+        line-height: 140%
         color: #949494
+        +sm
+            font-size: 11px
+        a
+            color: #949494
+    .nd-popup__btn button
+        padding: 21px
+        width: 100%
+        font-size: 15px
+        +sm
+            padding: 14px
 .carousel__button.is-close
     position: absolute !important
     top: 10px !important
@@ -842,6 +898,3 @@ body
             font-size: 20px
     svg
         display: none
-.nd-popup__btn button
-    +sm
-        padding: 14px
