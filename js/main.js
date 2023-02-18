@@ -42,17 +42,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let ndMenuItemBoxes = $('.nd-menu__item-box');
     for(let i = 0; ndMenuItemBoxes.length > i; i++){
         if($(ndMenuItemBoxes[i]).children().length > 7) {
-            $('<p class="more-btn">Ещё</p>').insertAfter(ndMenuItemBoxes[i]);
+            $('<p class="more-btn">Ещё <i class="fa fa-angle-down"></i></p>').insertAfter(ndMenuItemBoxes[i]);
         }
     }
     $('.more-btn').on('click', function(){
         if($(this).hasClass('more-btn')){
             $(this).prev('.nd-menu__item-box').toggleClass(' nd-menu__item-box--open');
-            $(this).html('Меньше');
+            $(this).html('<p class="more-btn">Меньше <i class="fa fa-angle-up"></i></p>');
             $(this).addClass('more-btn--open').removeClass('more-btn');
         } else {
             $(this).prev('.nd-menu__item-box').toggleClass(' nd-menu__item-box--open');
-            $(this).html('Ещё');
+            $(this).html('<p class="more-btn">Ещё <i class="fa fa-angle-down"></i></p>');
             $(this).addClass('more-btn').removeClass('more-btn--open');
         }
     })

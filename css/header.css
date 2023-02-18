@@ -1064,7 +1064,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 100%;
+  height: 490px;
 }
 
 .nd-menu__basic-list a {
@@ -1119,6 +1119,20 @@ body {
   text-align: center;
   height: 346px;
   margin-top: auto;
+}
+
+.more-btn, .more-btn--open{
+  color: #FE5C01;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.more-btn i, .more-btn--open i{
+  font-size: 14px;
 }
 
 /* nd-popup */
