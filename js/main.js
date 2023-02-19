@@ -5,29 +5,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let burgerWord = document.querySelector('.nd-hbottom__title1');
     let menu = document.querySelector('.nd-menu');
     let closeIcon = document.querySelector('.nd-menu__close');
-    //let burgerIcon = document.querySelector('.nd-cat-desk-ico');
 
     burger.onclick = function(){
         if(menu.classList.contains('nd-menu--open')){
             menu.classList.remove('nd-menu--open');
             burgerWord.textContent = 'Открыть';
-            //burgerIcon.classList.remove('nd-cat-desk-ico-open');
             burger.classList.remove('nd-hbottom__title--menu-open');
-            bodyWrapper.classList.remove('nd-body-wrapper-stop');
         } else {
             menu.classList.add('nd-menu--open');
             burgerWord.textContent = 'Закрыть';
-            //burgerIcon.classList.add('nd-cat-desk-ico-open');
             burger.classList.add('nd-hbottom__title--menu-open');
-            bodyWrapper.classList.add('nd-body-wrapper-stop');
         }
     }
     closeIcon.onclick = function(){
         menu.classList.remove('nd-menu--open');
         burgerWord.textContent = 'Открыть';
         burger.classList.remove('nd-hbottom__title--menu-open');
-        body.classList.remove('body-stop');
-        //burgerIcon.classList.remove('nd-cat-desk-ico-open');
     }
     // подпункты
     let ndMenuItemLists = document.querySelectorAll('.nd-menu__item-list--father');
