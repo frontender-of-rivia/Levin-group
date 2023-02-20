@@ -1333,16 +1333,16 @@
 		<!-- nd-video -->
 		<div class="nd-video">
 			<div class="nd-container">
-				<a class="nd-video__content" data-fancybox data-src="#nd-video-popup">
-					<picture>
-						<source srcset="img/video-img2.jpg" media="(max-width: 760px)">
-						<img src="img/video-img.jpg">
-					</picture>
-					<div class="nd-video__play">
-						<img src="img/play-icon.svg">
-						<span class="nd-video__text">
-							ВИДЕО О НАС
-						</span>
+				<a class="nd-video__content">
+					<iframe class="nd-video__iframe" data-src="https://www.youtube.com/embed/12WcMzjs0lw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<div class="nd-video__preview">
+						<picture>
+							<source srcset="img/video-img2.jpg" media="(max-width: 760px)">
+							<img src="img/video-img.jpg">
+						</picture>
+						<div class="nd-video__play">
+							<img src="img/play-icon.svg">
+						</div>
 					</div>
 				</a>
 			</div>
@@ -1622,10 +1622,8 @@
 					<div class="nd-clients__arrows nd-slider-arrows nd-slider-arrows--size1">
 
 					</div>
-					<div class="nd-clients__dots nd-slider-dots">
-
-					</div>
 				</div>
+				<div class="nd-clients__dots nd-slider-dots"></div>
 			</div>
 		</div>
 		<!-- nd-leave -->

@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+
+
+    let ndVideo = document.querySelector('.nd-video__content');
+    let ndVideoIframe = document.querySelector('.nd-video__iframe');
+    let ndVideoIframeLink = ndVideoIframe.getAttribute('data-src');
+    ndVideo.addEventListener('click', function(){
+        ndVideo.classList.add('nd-video__content--open');
+        ndVideoIframe.removeAttribute('data-src');
+        ndVideoIframe.setAttribute('src', ndVideoIframeLink);
+    })
+
+
+
+    let thisPos;
     // появление меню
-    let bodyWrapper = document.querySelector('.nd-body-wrapper');
+    let bodyWrapper = document.querySelector('.body-wrapper');
     let burger = document.querySelector('.nd-hbottom__title');
     let burgerWord = document.querySelector('.nd-hbottom__title1');
     let menu = document.querySelector('.nd-menu');
@@ -11,16 +25,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
             menu.classList.remove('nd-menu--open');
             burgerWord.textContent = 'Открыть';
             burger.classList.remove('nd-hbottom__title--menu-open');
+            bodyWrapper.classList.remove('body-wrapper--stop');
+            window.scrollTo(0, thisPos);
         } else {
+            thisPos = window.pageYOffset;
+            window.scrollTo(0, thisPos);
             menu.classList.add('nd-menu--open');
             burgerWord.textContent = 'Закрыть';
             burger.classList.add('nd-hbottom__title--menu-open');
+            bodyWrapper.classList.add('body-wrapper--stop');
         }
     }
     closeIcon.onclick = function(){
         menu.classList.remove('nd-menu--open');
         burgerWord.textContent = 'Открыть';
         burger.classList.remove('nd-hbottom__title--menu-open');
+        bodyWrapper.classList.remove('body-wrapper--stop');
+        window.scrollTo(0, thisPos);
     }
     // подпункты
     let ndMenuItemLists = document.querySelectorAll('.nd-menu__item-list--father');
@@ -36,36 +57,99 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-
-
     jQuery(function($) {
 
+        $('a.nd-mbanner__btn, a.nd-hcenter__btn2, .nd-leave__btn, .nd-last .nd-btn--default, a.nd-pops__block-btn').click(function () {
+            ym(1311009,'reachGoal','nd-click-zamer');
+        });
+
+        $('.nd-hcenter__phone, .nd-main__leave, .nd-footer_infos-call').click(function () {
+            ym(1311009,'reachGoal','nd-click-call')
+        });
+
         document.addEventListener( 'wpcf7mailsent', function( event ) {
-            if ( '17717' == event.detail.contactFormId ) {
+
+            let $cfid = event.detail.contactFormId;
+
+            let $goal = '';
+
+            if ($cfid == '17903' || $cfid == '17906') {
+                $goal = 'nd-letter-sent';
+            } else if ($cfid == '17904' || $cfid == '17905') {
+                $goal = 'nd-callletter-sent';
+            }
+
+            if ( '17903' == $cfid || '17904' == $cfid ) {
 
                 $('.nd-popup .fancybox-close-small').trigger('click');
+
+                if ($goal != '') {
+                    ym(1311009, 'reachGoal', $goal);
+                }
 
                 $.fancybox.open({
                     src: '#nd-thanks',
                     type: 'inline'
                 });
             }
+
+            if ( '17905' == $cfid || '17906' == $cfid ) {
+                $.fancybox.open({
+                    src: '#nd-thanks',
+                    type: 'inline'
+                });
+
+                if ($goal != '') {
+                    ym(1311009, 'reachGoal', $goal);
+                }
+
+            }
+
         }, false );
 
         document.addEventListener( 'wpcf7spam, wpcf7mailfailed', function( event ) {
-            if ( '17717' == event.detail.contactFormId ) {
 
-                $('.nd-popup .fancybox-close-small').trigger('click');
+            let $cfid = event.detail.contactFormId;
+
+            let $goal = '';
+
+            if ($cfid == '17903' || $cfid == '17906') {
+                $goal = 'nd-letter-fail';
+            } else if ($cfid == '17904' || $cfid == '17905') {
+                $goal = 'nd-callletter-fail';
+            }
+
+            if ( '17903' == $cfid || '17904' == $cfid || '17905' == $cfid || '17906' == $cfid ) {
 
                 $.fancybox.open({
                     src: '#nd-error',
                     type: 'inline'
                 });
+
+                if ($goal != '') {
+                    ym(1311009, 'reachGoal', $goal);
+                }
+
             }
         }, false );
 
+        jQuery( '.nd-popup form input, .nd-main__right form input, .nd-leave form input' ).on( 'keypress', function(e) {
+            if (e.which == 13) {
+                e.preventDefault();
+
+                let nextElement = $(this).closest('form').find('input[tabindex="' + (this.tabIndex + 1) + '"]');
+
+                if (nextElement.length) {
+                    $(this).closest('form').find('input[tabindex="' + (this.tabIndex + 1) + '"]').focus();
+                } else {
+                    $(this).closest('form').find('.wpcf7-not-valid-tip').hide();
+                    $(this).closest('form').find('input[type=submit]').trigger('click');
+                }
+            }
+        });
+
         $(window).scroll(function(){
-            if($(this).scrollTop() > 140){
+            if($(this).scrollTop() > 140) {
                 $('.nd-hcenter__logo').addClass('nd-hcenter__logo--fixed');
                 $('.nd-hcenter').addClass('nd-hcenter--fixed');
                 $('.nd-hcenter__phone').addClass('nd-hcenter__phone--fixed');
@@ -75,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 $('.nd-menu').addClass('nd-menu--fixed');
                 $('.nd-hcenter__btn2').addClass('nd-hcenter__btn2--fixed');
             }
-            else if ($(this).scrollTop() < 140){
+            else if ($(this).scrollTop() < 140) {
                 $('.nd-hcenter__logo').removeClass('nd-hcenter__logo--fixed');
                 $('.nd-hcenter').removeClass('nd-hcenter--fixed');
                 $('.nd-hcenter__phone').removeClass('nd-hcenter__phone--fixed');
@@ -112,12 +196,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
 
         // nd-cusers__box
-        let users = false;
-
-        if (document.documentElement.clientWidth < 762) {
-            users = true;
-        }
-
         $('.nd-cusers__box').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -126,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             appendArrows: $('.nd-cusers__arrows'),
             prevArrow: '<i class="fa fa-angle-left"></i>',
             nextArrow: '<i class="fa fa-angle-right"></i>',
-            autoplay : users,
+            autoplay : true,
             autoplaySpeed: 1800,
             lazyLoad: 'ondemand',
             responsive: [
@@ -148,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             swipeToSlide: true,
             variableWidth: true,
             infinite: true,
+            edgeFriction: 0,
             lazyLoad: 'ondemand',
             appendArrows: $('.nd-cert__arrows'),
             prevArrow: '<i class="fa fa-angle-left"></i>',
@@ -160,20 +239,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
             slidesToScroll: 1,
             swipeToSlide: true,
             dots: true,
+            edgeFriction : 0,
+            swipe : true,
             appendDots: $('.nd-main__dots'),
             arrows: false,
             autoplay : true,
-            autoplaySpeed: 1800
+            autoplaySpeed: 1700
         });
 
         // табы для меню
         $('.nd-tabs-wrapper').each(function() {
             let ths = $(this);
-            ths.find('.nd-tab-item').not(':first').hide();
+            //ths.find('.nd-tab-item').not(':first').hide();
             ths.find('.nd-tab').click(function() {
                 ths.find('.nd-tab').removeClass('nd-tab-active').eq($(this).index()).addClass('nd-tab-active');
                 ths.find('.nd-tab-item').hide().eq($(this).index()).fadeIn()
-            }).eq(0).addClass('nd-tab-active');
+            }); //.eq(0).addClass('nd-tab-active');
         });
 
         if ($('body').hasClass('home')) {

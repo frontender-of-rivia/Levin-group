@@ -98,6 +98,12 @@
   font-size: 14px;
 }
 
+.nd-footer__infos-item p > span {
+  color: #474D63;
+  font-size: 14px;
+  display:inline;
+}
+
 .nd-footer__content-left {
   width: 240px;
 }
